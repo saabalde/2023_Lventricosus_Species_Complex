@@ -1,8 +1,8 @@
 ## Prepare the data
-The OrthoFinder analysis identified 23,193 orthogroups, 4,038 of them containing all species. Among them, 2,867 were single copy.
+The [OrthoFinder](https://github.com/davidemms/OrthoFinder) analysis identified 23,193 orthogroups, 4,038 of them containing all species. Among them, 2,867 were single copy.
 You can download these orthogroups from the "01-Orthogroups", and then replicate my analyses with the following commands:
 
-First, align all fasta files using MAFFT
+First, align all fasta files using [MAFFT](https://mafft.cbrc.jp/alignment/software/).
 
     mkdir 02-MAFFT
     cp 01-Orthogroups/*fasta 02-MAFFT/
@@ -14,7 +14,7 @@ First, align all fasta files using MAFFT
     rm *fasta
     cd ../
 
-We used BMGE to clean these alignments. Ambiguously aligned positions are removed with default parameters. Additionally, we remove all sequences with more than 50% gaps and columns with more than 70% gaps (-g 0.5:0.7), and keep high-evolving sites (-h 1 -w 1).
+We used [BMGE](https://doi.org/10.1186/1471-2148-10-210) to clean these alignments. Ambiguously aligned positions are removed with default parameters. Additionally, we remove all sequences with more than 50% gaps and columns with more than 70% gaps (-g 0.5:0.7), and keep high-evolving sites (-h 1 -w 1).
 
     mkdir 03-BMGE
     cp 02-MAFFT/*mafft 03-BMGE
@@ -33,7 +33,6 @@ I checked 10 alignments and they look fine to me. However, because BMGE removed 
     grep -c '>' 03-BMGE/*fas > ../grep.log 
     # it creates a list with the number of sequences per alignment. I use it to generate two files: BMGE_18sequences.txt, and BMGE_no_18sequences.txt
 
-
 Move the 2,447 alignments that still have all individuals to a new folder.
 
     mkdir 04-BMGE_18sequences 04-BMGE_no_18sequences
@@ -46,7 +45,7 @@ Move the 2,447 alignments that still have all individuals to a new folder.
         cp 03-BMGE/${LINE} ./04-BMGE_no_18sequences/
     done < ./BMGE_no_18sequences.txt
 
-Concatenate all alignments into a supermatrix
+Concatenate all alignments into a supermatrix with [FASconCat](https://github.com/PatrickKueck/FASconCAT-G).
 
     mkdir 05-Supermatrix
     cp ./04-BMGE_18sequences/*fas 05-Supermatrix/
@@ -160,7 +159,7 @@ The assumption of stationarity is rejected in 44 genes, whereas homogeneity is r
 
 ## Phylogenomic analyses
 
-I will use two different approaches for the phylogenomic analyses. First, I will use IQ-TREE to analysed the concatenated dataset. I will let the program infer the best substitution model for each partition using the built-in ModelFinder algorithm.
+I will use two different approaches for the phylogenomic analyses. First, I will use [IQ-TREE](http://www.iqtree.org/) to analysed the concatenated dataset. I will let the program infer the best substitution model for each partition using the built-in ModelFinder algorithm.
 
     mkdir 11-IQtree_symmetry_pass/
     cp 09-Supermatrix_symmetry_pass/FcC_supermatrix* 11-IQtree_symmetry_pass/
@@ -168,7 +167,7 @@ I will use two different approaches for the phylogenomic analyses. First, I will
     iqtree -s FcC_supermatrix.fas -spp FcC_supermatrix_partition.txt -m MFP -b 100 -alrt 1000 -bnni -T AUTO
     cd ../
 
-Second, I use ASTRAL to infer the species tree under the multi-species coalescent model
+Second, I use [ASTRAL](https://github.com/smirarab/ASTRAL) to infer the species tree under the multi-species coalescent model
 
     mkdir 12-ASTRAL_symmetry_pass
     cat ./10-Gene_trees_symmetry_pass/*treefile > My_gene_trees
