@@ -134,6 +134,8 @@ Three main groups were recovered in the PCA: the two outgroups, the two samples 
 Run the **SNPs_PCA.R** R script to plot the PCA results.
 
 ## SNP analysis: Phylogenetics
+Finally, I also used this SNP set to run a phylogenetic analyses. The two new tools are [vcf2phylip](https://github.com/edgardomortiz/vcf2phylip), to convert the vcf to a phylip alignments, and [IQ-TREE](http://www.iqtree.org/).
+
 
 ## Can we see a pattern in the PCA?
 
