@@ -136,6 +136,18 @@ Run the **SNPs_PCA.R** R script to plot the PCA results.
 ## SNP analysis: Phylogenetics
 Finally, I also used this SNP set to run a phylogenetic analyses. The two new tools are [vcf2phylip](https://github.com/edgardomortiz/vcf2phylip), to convert the vcf to a phylip alignments, and [IQ-TREE](http://www.iqtree.org/).
 
+    # Convert the bed file to vcf
+    ./plink --bfile Lventricosus_snps.noLD --allow-extra-chr --recode vcf --out Lventricosus_snps.noLD
+    
+    # Convert the vcf file to a phylip alignment. Do not allow missing data nor resolve ambiguities
+    python vcf2phylip.py --input Lventricosus_snps.noLD.vcf.gz --min-samples-locus 17 --output-prefix Lventricosus_snps.noLD
+    
+    # Run IQ-TREE. Use ModelFinder to infer the best fit substitution model, but aply the ascertainment bias correction
+    iqtree -s Lventricosus_snps.noLD.min17.phy -m MFP+ASC -b 1000 -alrt 1000 -nt AUTO
+    rm *log *trees *gz
+    iqtree -s Lventricosus_snps.noLD.min17.phy.varsites.phy -m MFP+ASC -b 1000 -alrt 1000 -nt AUTO
+
+Note that IQ-TREE had to be run twice. Invariant sites are not allowed in the matrix, so the idea is to run IQ-TREE once, let it fail, and then use the new matrix that generated after removing the invariant sites to infer the tree.
 
 ## Can we see a pattern in the PCA?
 
