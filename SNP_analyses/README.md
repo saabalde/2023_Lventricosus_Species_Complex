@@ -5,3 +5,7 @@
 ## SNP analysis: Phylogenetics
 
 ## Can we see a pattern in the PCA?
+
+![image](../SNP_analyses/SNPs_PCA.png)
+
+---
