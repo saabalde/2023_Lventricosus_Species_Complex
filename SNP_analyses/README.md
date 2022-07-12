@@ -113,6 +113,25 @@ Note that the samples name file is a two-column tab separated table with the rea
     A00718_299_HTC5KDSXY_1_TAATACAG CD02
 
 ## SNP analysis: PCA
+I used [Plink](https://www.cog-genomics.org/plink/) to run the PCA but, before that, it is important to remove the SNPs that are evolving under linkage disequilibrium. Plink will analyze the SNPs within a windows of 100,000 base pairs, with a sliding window stepsize 10, and a r2 threshold 0f 0.1.
+
+    # Remove SNPs under linkage disequilibrium
+    ./plink --vcf Lventricosus.filter7.snps.rename.vcf.gz --vcf-half-call reference --double-id --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 100 10 0.1 --out Lventricosus.snps.0-LD
+    
+    # Make a bed file and run the PCA
+    ./plink --vcf Lventricosus.filter7.snps.rename.vcf.gz --vcf-half-call reference --double-id --allow-extra-chr --set-missing-var-ids @:# --extract Lventricosus.snps.0-LD.prune.in --make-bed --pca --out Lventricosus.snps.1-PCA
+
+Three main groups were recovered in the PCA: the two outgroups, the two samples from the green clade, and all the rest. I will run this analysis again, with the same parameters, but excluding the two outgroups and the two green samples. Note that the "Exclude_samples.txt" file is just a list of the four samples ID's.
+
+    # Exclude the four samples
+    vcftools --gzvcf Lventricosus.filter7.snps.rename.vcf.gz --remove Exclude_samples.txt --recode --recode-INFO-all --out Lventricosus.filter7.snps.rename.subsample
+    
+    # Remove SNPs under linkage disequilibrium and make the PCA
+    ./plink --vcf Lventricosus.filter7.snps.rename.subsample --vcf-half-call reference --double-id --allow-extra-chr --set-missing-var-ids @:# --indep-pairwise 100 10 0.1 --out Lventricosus.snps.2-LD_subset
+    
+    ./plink --vcf Lventricosus.filter7.snps.rename.subsample --vcf-half-call reference --double-id --allow-extra-chr --set-missing-var-ids @:# --extract Lventricosus.snps.2-LD_subset.prune.in --make-bed --pca --out Lventricosus.snps.3-PCA_subset
+
+Run the **SNPs_PCA.R** R script to plot the PCA results.
 
 ## SNP analysis: Phylogenetics
 
