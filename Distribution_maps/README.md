@@ -3,3 +3,5 @@ This directory contains the data (**Lautoconus ventricosus.Map.kml**) and the R 
 
 ## How do the maps look like?
 ![image](../Distribution_maps/Mitochondrial_clades_distributions.png)
+
+---
