@@ -1,0 +1,16 @@
+1  purple
+2  purple
+3  orange
+4  green
+5  blue
+6  purple
+7  orange
+8  purple
+9  red
+10 purple
+11 blue
+12 red
+13 blue
+14 green
+15 orange
+16 orange
