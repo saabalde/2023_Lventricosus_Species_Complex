@@ -174,7 +174,7 @@ Second, I use ASTRAL to infer the species tree under the multi-species coalescen
     cat ./10-Gene_trees_symmetry_pass/*treefile > My_gene_trees
     java -jar -Xmx12000M /home/saabalde/Escritorio/software/Astral/astral.5.7.7.jar -i My_gene_trees.tre -o Species_tree_ASTRAL.tre 2> ASTRAL.log
 
-## This is the final tree inferred with IQ-TREE:
+## This is the final tree inferred with IQ-TREE
 
 All nodes have maximum statistic support unless otherwise specified.
 ![image](../Phylogenomics/IQtree_437genes.png)
