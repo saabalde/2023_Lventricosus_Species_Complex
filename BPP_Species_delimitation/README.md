@@ -21,4 +21,9 @@ To run BPP, simply type:
     bpp --cfile Lventricosus.bpp.A11.algorithm0.ctl
     bpp --cfile Lventricosus.bpp.A11.algorithm1.ctl
 
+## What was the result?
+It turns out BPP could not return a confident number of species. Apparently the signal in the data is mixed, and BPP would propose three or four species depending on the supermatrix analysed. You can see the two proposed species delimitation hypotheses in the figure below. Based on these results, **we propose to describe three species within the *L. ventricosus* species complex**, and a forth one (the red clade) pending on further analyses with an extended sampling.
+
+![image](../BPP_Species_delimitation/Species_delimitation_hypotheses.png)
+
 ---
