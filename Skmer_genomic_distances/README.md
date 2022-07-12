@@ -8,7 +8,7 @@ First, create a directory with all samples. If you are using raw sequencing read
 
 This analysis generates a distance matrix called **ref-dist-mat.txt**, that I edited slightly to make my life easier while plotting the correlation matrix.
 
-## This is how the matrix looks like:
+## This is how the matrix looks like
 ![image](../Skmer_genomic_distances/Correlation_matrix.png)
 
 ---
