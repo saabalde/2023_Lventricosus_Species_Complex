@@ -1,4 +1,4 @@
-# PENDING: MCMCtree
+# PENDING: MCMCtree and Morphometric analyses
 
 # Hidden species diversity within the Mediterranean cone snail, *Lautoconus ventricosus*
 ## What was this study about?
