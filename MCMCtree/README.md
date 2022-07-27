@@ -38,21 +38,26 @@ Before running the program, we need to estimate the prior for the beta parameter
     rate = alpha / beta = 2 / 4200 = 0.0005
 
 ### Run MCMCTree
-Now that everything is ready, we can finally run estimate the diversification times. First, calculate the Hessian and the gradient
+Now that everything is ready, we can finally run estimate the diversification times. First, calculate the Hessian and the gradient:
+    mcmctree MCMC_mtDNA_step1.ctl
+    mcmctree MCMC_nuclear_step1.ctl
 
-    
+Second, run MCMCTree from the prior (without data) to make sure the calibrations match the ones you have defined above. If they don't, something is wrong". Run this twice to check convergence:
+    mcmctree MCMC_mtDNA_priorsampling.ctl 2>&1 | tee log_MCMCtree_prior_mtDNA.txt
+    mcmctree MCMC_nuclear_priorsampling.ctl 2>&1 | tee log_MCMCtree_prior_nuclear.txt
 
+Finally, run MCMCTree with your data to infer the divergence times. Run this at least twice to assess convergence:
+    mcmctree MCMC_mtDNA_step2.ctl 2>&1 | tee log_MCMCtree_mtDNA.txt
+    mcmctree MCMC_nuclear_step2.ctl 2>&1 | tee log_MCMCtree_nuclear.txt
 
-To run BPP, simply type:
+You can use one of the tutorials above to learn how to interpret the results.
 
-    bpp --cfile Lventricosus.bpp.A10.algorithm0.ctl
-    bpp --cfile Lventricosus.bpp.A10.algorithm1.ctl
-    bpp --cfile Lventricosus.bpp.A11.algorithm0.ctl
-    bpp --cfile Lventricosus.bpp.A11.algorithm1.ctl
+### Plot the results
+I used the "MCMCtreeR_PlotChronogram.R" script and the [MCMCtreeR package](https://github.com/PuttickMacroevolution/MCMCtreeR) to plot the results, but there are many ways to do this. If you are interested on exploring all the options that this amazing package offers, have a look at [this awesome tutorial](https://github.com/PuttickMacroevolution/MCMCtreeR/blob/master/vignettes/MCMCtree_plot_pdf.pdf) written by its developer, Mark Puttick.
 
-## What was the result?
-It turns out BPP could not return a confident number of species. Apparently the signal in the data is mixed, and BPP would propose three or four species depending on the supermatrix analysed. You can see the two proposed species delimitation hypotheses in the figure below. Based on these results, **we propose to describe three species within the *L. ventricosus* species complex**, and a forth one (the red clade) pending on further analyses with an extended sampling.
+## Final chronogram
+This is just an example of all the possible figures that can be created with MCMCtreeR. Give it a try!
 
-![image](../BPP_Species_delimitation/Species_delimitation_hypotheses.png)
+![image](../MCMCtree/Lventricosus_nuclear_Chronogram.png)
 
 ---
