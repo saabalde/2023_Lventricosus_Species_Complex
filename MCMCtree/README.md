@@ -26,6 +26,8 @@ After running IQ-TREE, I manually edited the trees to root them and remove branc
 ### Estimate the priors
 Before running the program, we need to estimate the prior for the beta parameter of the gene substitution rate. I followed [this tutorial](https://github.com/sabifo4/morpho/tree/master/01_model_parameters/carnivoran_mol_data/mit12%2B3). Briefly, I used the tree inferred with IQ-TREE above to extract average the branch lengths between *Africonus* and *Lautoconus* and used the (relatively accurate) estimation of the divergence times between these two genera to calculate the beta parameter. The alpha was pre-defined in 2 to have a fairly wide distribution:
 
+![image](../MCMCtree/Branch_length_estimation.png)
+
     Alpha = 2
     Branch length (nuclear) = (0.0045+0.0036+0.0036+0.0015+0.0011+0.0005+0.0007+0.0008+0.0009+0.0063) / 2 = 0.0235 / 2 = 0.01175
     Diversification time = ~25 My
@@ -35,7 +37,10 @@ Before running the program, we need to estimate the prior for the beta parameter
     Likewise:
     rate = alpha / beta = 2 / 4200 = 0.0005
 
+### Run MCMCTree
+Now that everything is ready, we can finally run estimate the diversification times. First, calculate the Hessian and the gradient
 
+    
 
 
 To run BPP, simply type:
