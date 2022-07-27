@@ -53,7 +53,7 @@ Finally, run MCMCTree with your data to infer the divergence times. Run this at 
     mcmctree MCMC_mtDNA_step2.ctl 2>&1 | tee log_MCMCtree_mtDNA.txt
     mcmctree MCMC_nuclear_step2.ctl 2>&1 | tee log_MCMCtree_nuclear.txt
 
-You can use one of the tutorials above to learn how to interpret the results.
+You can use one of the tutorials above to learn how to interpret the results. Also, if you want to replicate exactly our results note that I usually use "12345" and "54321" as seeds.
 
 ### Plot the results
 I used the "MCMCtreeR_PlotChronogram.R" script and the [MCMCtreeR package](https://github.com/PuttickMacroevolution/MCMCtreeR) to plot the results, but there are many ways to do this. If you are interested on exploring all the options that this amazing package offers, have a look at [this awesome tutorial](https://github.com/PuttickMacroevolution/MCMCtreeR/blob/master/vignettes/MCMCtree_plot_pdf.pdf) written by its developer, Mark Puttick.
