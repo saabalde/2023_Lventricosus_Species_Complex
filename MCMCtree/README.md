@@ -39,14 +39,17 @@ Before running the program, we need to estimate the prior for the beta parameter
 
 ### Run MCMCTree
 Now that everything is ready, we can finally run estimate the diversification times. First, calculate the Hessian and the gradient:
+
     mcmctree MCMC_mtDNA_step1.ctl
     mcmctree MCMC_nuclear_step1.ctl
 
 Second, run MCMCTree from the prior (without data) to make sure the calibrations match the ones you have defined above. If they don't, something is wrong". Run this twice to check convergence:
+
     mcmctree MCMC_mtDNA_priorsampling.ctl 2>&1 | tee log_MCMCtree_prior_mtDNA.txt
     mcmctree MCMC_nuclear_priorsampling.ctl 2>&1 | tee log_MCMCtree_prior_nuclear.txt
 
 Finally, run MCMCTree with your data to infer the divergence times. Run this at least twice to assess convergence:
+
     mcmctree MCMC_mtDNA_step2.ctl 2>&1 | tee log_MCMCtree_mtDNA.txt
     mcmctree MCMC_nuclear_step2.ctl 2>&1 | tee log_MCMCtree_nuclear.txt
 
