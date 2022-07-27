@@ -1,5 +1,3 @@
-# PENDING: MCMCtree and Morphometric analyses
-
 # Hidden species diversity within the Mediterranean cone snail, *Lautoconus ventricosus*
 ## What was this study about?
 I am not sure if this is entirely true, but I have heard several times the Mediterranean cone snail, *L. ventricosus*, is one of the mollusk species with more synonym names. Regardless if that little fact is true or not, a quick look to the [WoRMS database](https://www.marinespecies.org/aphia.php?p=taxdetails&id=428401) is enough to find out that almost 100 names have been proposed for this species.
