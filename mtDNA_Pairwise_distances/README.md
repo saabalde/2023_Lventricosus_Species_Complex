@@ -7,4 +7,6 @@ You should note the depicted distances do not represent all vs all distances. Be
 ## The resulting barplot
 ![image](../mtDNA_Pairwise_distances/mtDNA_PairwiseDistances.png)
 
+Part of Figure 2.
+
 ---
