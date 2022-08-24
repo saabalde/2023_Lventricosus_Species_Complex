@@ -178,4 +178,6 @@ Second, I use [ASTRAL](https://github.com/smirarab/ASTRAL) to infer the species 
 All nodes have maximum statistic support unless otherwise specified.
 ![image](../Phylogenomics/IQtree_437genes.png)
 
+Modified version of Fig. 3.
+
 ---
