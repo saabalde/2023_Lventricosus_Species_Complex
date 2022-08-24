@@ -153,4 +153,6 @@ Note that IQ-TREE had to be run twice. Invariant sites are not allowed in the ma
 
 ![image](../SNP_analyses/SNPs_PCA.png)
 
+Figure 4a.
+
 ---
