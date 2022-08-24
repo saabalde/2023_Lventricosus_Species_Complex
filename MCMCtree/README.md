@@ -63,4 +63,6 @@ This is just an example of all the possible figures that can be created with MCM
 
 ![image](../MCMCtree/Lventricosus_nuclear_Chronogram.png)
 
+Figure 5.
+
 ---
