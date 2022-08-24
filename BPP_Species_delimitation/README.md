@@ -26,4 +26,6 @@ It turns out BPP could not return a confident number of species. Apparently the 
 
 ![image](../BPP_Species_delimitation/Species_delimitation_hypotheses.png)
 
+Modified version of Fig. 3.
+ 
 ---
