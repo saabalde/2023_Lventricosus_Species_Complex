@@ -11,6 +11,6 @@ This analysis generates a distance matrix called **ref-dist-mat.txt**, that I ed
 ## This is how the matrix looks like
 ![image](../Skmer_genomic_distances/Correlation_matrix.png)
 
-Modified version of Fig. 4b.
+Part of Figure 4b.
 
 ---
