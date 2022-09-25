@@ -130,10 +130,10 @@ MCMC.tree.plot(phy = my_tree, cex.tips = 1, time.correction = 1, MCMC.chain = mc
 # Color the tips according to the species:
 # green:  #09af02
 # violet: #b902cc
-# yellow: #c9c913
+# yellow: #ecfe36
 
-tip_colors <- c("#c9c913", "#c9c913", "#c9c913", "#c9c913", "#c9c913", "#c9c913", 
-                "#c9c913", "#c9c913", "#c9c913", "#b902cc", "#b902cc", "#b902cc", 
+tip_colors <- c("#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", 
+                "#ecfe36", "#ecfe36", "#ecfe36", "#b902cc", "#b902cc", "#b902cc", 
                 "#b902cc", "#b902cc", "#09af02", "#09af02", "black", "black")
 
 MCMC.tree.plot(phy = my_tree, cex.tips = 1, time.correction = 1, MCMC.chain = mcmc_nuclear, 
@@ -143,15 +143,15 @@ MCMC.tree.plot(phy = my_tree, cex.tips = 1, time.correction = 1, MCMC.chain = mc
                density.border.col = "#00000080", no.margin = TRUE, edge.width = 4,
                tip.color = tip_colors, font = 2)
 
-# Color the branches as per the mitochondrial clades
+# Color the branches as per the nuclear clades:
 # green:  #09af02
 # violet: #b902cc
 # yellow: #c9c913
 
-branch_colors = c("black", "black", "#c9c913", "#c9c913", "#c9c913", "#c9c913", 
-                  "#c9c913", "#c9c913", "#c9c913", "#c9c913", "#c9c913", "#c9c913", 
-                  "#c9c913", "#c9c913", "#c9c913", "#c9c913", "#c9c913", "#c9c913", 
-                  "#c9c913", "#b902cc", "#b902cc", "#b902cc", "#b902cc", "#b902cc", 
+branch_colors = c("black", "black", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", 
+                  "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", 
+                  "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", "#ecfe36", 
+                  "#ecfe36", "#b902cc", "#b902cc", "#b902cc", "#b902cc", "#b902cc", 
                   "#b902cc", "#b902cc", "#b902cc", "#b902cc", "#09af02", "#09af02", 
                   "#09af02", "black", "black", "black")
 
