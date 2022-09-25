@@ -5,7 +5,7 @@ I am not sure if this is entirely true, but I have heard several times the Medit
 In this study, we have used *cox1* barcodes, complete mitochondrial genomes and low coverage nuclear genomes to delve into the diversity of cone snails in the Mediterranean Sea. We propose that *L. ventricosus* is actually a complex of cryptic species, with at least three different species hiding within the same name. Some support for a forth species is found in the data, but the signal is not strong enough and more specimens should be included before making a decision.
 
 ## Repository description
-This repository was originally created to share the R scripts used to draw the main figures of this manuscript. Its intended use, however, has been expanded to provide further details to replicate the main analyses. Because of the size of the files only a handful of the input data will be provided, while all other will only be described.
+This repository was originally created to share the R scripts used to draw the main figures of this manuscript. Its intended use, however, has been expanded to provide further details to replicate the main analyses. Due to the size of the files only a handful of the input data will be provided, while all other will only be described.
 
 ### Molecular data can be downloaded from the NCBI:
 <ul>
