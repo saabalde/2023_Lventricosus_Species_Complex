@@ -48,7 +48,7 @@ sites_violet <- subset(sites, sites$Clade == "#b902cc")
 Western_species <- subset(sites, sites$Clade == "#b902cc")
 Central_species <- subset(sites, sites$Clade == "#09af02")
 Eastern_species <- rbind(sites_blue, sites_orange, sites_red)
-Eastern_species$Clade <- "#c9c913"
+Eastern_species$Clade <- "#eeff41"
 
 All_species <- rbind(Western_species, Eastern_species, Central_species)
 
