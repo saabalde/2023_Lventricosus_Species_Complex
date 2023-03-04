@@ -38,7 +38,7 @@ Before running the program, we need to estimate the prior for the beta parameter
     rate = alpha / beta = 2 / 4200 = 0.0005
 
 ### Run MCMCTree
-Now that everything is ready, we can finally run estimate the diversification times. First, calculate the Hessian and the gradient:
+Now that everything is ready, we can finally run estimate the diversification times. Note that these analyses are based on the "Dataset 2" from BPP, but we also tried Datasets 1 and 4 as per a reviewer recommendation. First, calculate the Hessian and the gradient:
 
     mcmctree MCMC_mtDNA_step1.ctl
     mcmctree MCMC_nuclear_step1.ctl
