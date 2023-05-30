@@ -98,7 +98,7 @@ Variant calling was performed with freebayes, which also includes several qualit
     # Combining both filters:
     vcftools --vcf Lventricosus.filter6.vcf --max-meanDP 95 --exclude-positions Lventricosus.filter6.LOCI --recode --recode-INFO-all --out Lventricosus.filter7
 
-I know **Filter 7** can be confusing. For more details on this filter see [this](http://bcb.io/2014/05/12/wgs-trio-variant-evaluation/) and [this](https://academic.oup.com/bioinformatics/article/30/20/2843/2422145).
+I know **Filter 7** can be confusing. For more details on this filter see [this](http://bcb.io/2014/05/12/wgs-trio-variant-evaluation/) **(this link is broken, trying to find an alternative)** and [this](https://academic.oup.com/bioinformatics/article/30/20/2843/2422145).
 
 Finally, extract only the SNPs from the variants list and rename the samples (at the moment the read group information is used instead of the specimen ID).
 
