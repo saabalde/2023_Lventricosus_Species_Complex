@@ -1,7 +1,7 @@
 ## Brief introduction
 The recently published [high-quality genome of *L. ventricosus*](https://doi.org/10.1093/gigascience/giab037) was used as reference to map the raw sequencing data from all specimens with [BWA](http://bio-bwa.sourceforge.net/), variant calling was performed with [freebayes](https://github.com/freebayes/freebayes), and filtered with [VCFtools](https://vcftools.github.io/index.html) and [vcffilter](https://github.com/biopet/vcffilter).
 
-The input and intermediate files are too big to be shared here, but I have uploaded the original, unfiltered freebayes output to [FigShare](https://figshare.com/projects/2023_Lventricosus_Species_Complex/169686). Here I will just describe the steps necessary to replicate these analyses and share the R script used to plot the PCA.
+The input and intermediate files are too big to be shared here, but I have uploaded the original, unfiltered freebayes output to [figshare](https://figshare.com/projects/2023_Lventricosus_Species_Complex/169686). Here I will just describe the steps necessary to replicate these analyses and share the R script used to plot the PCA.
 
 The reference genome can be downloaded from [here](https://www.ncbi.nlm.nih.gov/genome/?term=conus+ventricosus). Links to raw reads were provided in [the main site](../README.md).
 
