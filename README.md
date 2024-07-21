@@ -18,7 +18,7 @@ This repository was originally created to share the R scripts used to draw the m
 
 ## Citation
 <ul>
-  <li>Abalde, S., Crocetta, F., Tenorio, M.J., D'Aniello, S., Fassio, G., Rodriguez-Flores, P.C., Uribe, J.E., Afonso, C.M.L., Oliverio, M. and Zardoya, R. (early release). Hidden species diversity within the Mediterranean cone snail, <i>Lautoconus ventricosus</i>. <a href="https://www.sciencedirect.com/science/article/pii/S1055790323001380">Molecular Phylogenetics and Evolution</a>.</li>
+  <li>Abalde, S., Crocetta, F., Tenorio, M.J., D'Aniello, S., Fassio, G., Rodriguez-Flores, P.C., Uribe, J.E., Afonso, C.M.L., Oliverio, M. and Zardoya, R. (2023). Hidden species diversity within the Mediterranean cone snail, <i>Lautoconus ventricosus</i>. <a href="https://www.sciencedirect.com/science/article/pii/S1055790323001380">Molecular Phylogenetics and Evolution</a>, 186: 107838.</li>
 </ul>
 
 ---
